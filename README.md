@@ -19,11 +19,9 @@ comentamos todo exepto las referencias al navegador y la terminal, eligiendo y a
 
 Luego nos vamos input.conf y agregamos para poder hacer tildes con el teclado US, usando la variante internacional
 
-# Control your input devices
-# See https://wiki.hypr.land/Configuring/Variables/#input
 input {
-  # Use multiple keyboard layouts and switch between them with Left Alt + Right Alt
-  # kb_layout = us,dk,eu
+  Use multiple keyboard layouts and switch between them with Left Alt + Right Alt
+
   kb_layout = us
   kb_variant = intl
   kb_options = compose:caps # ,grp:alts_toggle
