@@ -1,6 +1,14 @@
 # config-omarchy
 Paso a paso de la confuguración de omarchy que es simplemente cambiar unas lineas
 
+Empezamos con el .bashrc
+
+está en .local/share/omarchy/default/bash/rc
+
+Luego clonamos el repositorio tmux, y le cambiar el nombre por .tmux
+
+instalas tmux
+
 Vamos al .config/hypr/bindings.conf
 
 $terminal = kitty
