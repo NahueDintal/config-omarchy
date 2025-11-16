@@ -1,0 +1,14 @@
+# Application bindings
+$terminal = kitty
+$browser = chromium
+$editor = nvim
+
+bind = SUPER, F, fullscreenstate, 3,
+
+bindd = SUPER, return, Terminal, exec, omarchy-launch-or-focus $terminal
+bindd = SUPER, D, Discord, exec, omarchy-launch-or-focus-webapp Discord "https://discord.com/channels/@me"
+bindd = SUPER, B, Browser, exec, omarchy-launch-or-focus $browser
+bindd = SUPER, N, Editor, exec, omarchy-launch-or-focus "nvim-editor" "kitty --title nvim-editor -e nvim"
+bindd = SUPER, Y, YouTube, exec, omarchy-launch-or-focus-webapp YouTube "https://youtube.com/"
+bindd = SUPER, G, WhatsApp, exec, omarchy-launch-or-focus-webapp WhatsApp "https://web.whatsapp.com/"
+bindd = SUPER, T, Activity, exec, $terminal -e btop
