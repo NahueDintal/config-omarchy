@@ -29,6 +29,11 @@ hypr
 $terminal = kitty
 $browser = librewolf
 
+bind para abrir nvim en kitty exclusivo
+
+bind = SUPER, N, exec, kitty --title nvim-editor -e nvim
+
+
 # Atajos de teclado principales
 bind = SUPER, Return, exec, $terminal --working-directory="(omarchy-cmd-terminal-cwd)"
 bind = SUPER, F, fullscreen
