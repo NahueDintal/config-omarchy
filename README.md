@@ -1,5 +1,5 @@
-Configuración de Omarchy
-Una guía paso a paso para configurar Omarchy con las aplicaciones esenciales.
+# Configuración de Omarchy
+##Una guía paso a paso para configurar Omarchy con las aplicaciones esenciales.
 
 📋 Prerrequisitos
 Sistema Arch Linux instalado
