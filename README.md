@@ -24,7 +24,7 @@ sudo pacman -S tmux
 ```
 ## Configuración de Hyprland (Bindings)
 ```
-Archivo: ~/.config/hypr/bindings.conf
+~/.config/hypr/bindings.conf
 ```
 Configuración en los archivos con los script para buscar app's
 
