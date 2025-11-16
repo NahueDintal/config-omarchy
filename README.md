@@ -61,5 +61,13 @@ sudo pacman -S \
     speedtest-cli \
     kitty \
 ```
-¡Listo! Tu configuración de Omarchy debería estar funcionando correctamente.
-
+# Waybar
+```
+  "clock": {
+    "format": "{:L%d %A %H:%M}",
+    "format-alt": "{:L%d %B W%V %Y}",
+    "timezone": "America/Argentina/Buenos_Aires",
+    "tooltip": false,
+    "on-click-right": "omarchy-cmd-tzupdate"
+  },
+```
