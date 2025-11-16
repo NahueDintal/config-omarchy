@@ -6,38 +6,34 @@
 ```
 ~/.local/share/omarchy/default/bash/rc
 ```
-Agrega tus alias y configuraciones personalizadas al archivo bashrc.
+Y copiar el bash que está en estos archivos.
+```
+source .bashrc
+```
 
-2. Configuración de Tmux
-bash
-# Clonar y configurar tmux
-git clone <tmux-repo-url> ~/.tmux
+## Configuración de Tmux
 
-# Instalar tmux
+Clonar y configurar tmux
+```
+git@github.com:NahueDintal/tmux.git
+mv tmux .tmux
+```
+Instalar tmux
+```
 sudo pacman -S tmux
-3. Configuración de Hyprland (Bindings)
+```
+## Configuración de Hyprland (Bindings)
+```
 Archivo: ~/.config/hypr/bindings.conf
+```
+Configuración en los archivos con los script para buscar app's
 
-hypr
-# Variables esenciales
-$terminal = kitty
-$browser = librewolf
+## Configuración del Teclado
 
-bind para abrir nvim en kitty exclusivo
-
-bind = SUPER, N, exec, kitty --title nvim-editor -e nvim
-
-
-# Atajos de teclado principales
-bind = SUPER, Return, exec, $terminal --working-directory="(omarchy-cmd-terminal-cwd)"
-bind = SUPER, F, fullscreen
-bind = SUPER, B, exec, $browser
-bind = SUPER, T, exec, $terminal -e btop
-
-# Comenta o elimina los demás bindings no utilizados
-4. Configuración del Teclado
-Archivo: ~/.config/hypr/input.conf
-
+```
+~/.config/hypr/input.conf
+```
+```
 hypr
 input {
     # Layout US Internacional para tildes
@@ -48,66 +44,22 @@ input {
     # Alternar entre layouts con Alt + Alt
     # kb_options = grp:alts_toggle
 }
-5. Configuraciones Adicionales
-bash
-# Clonar configuraciones
+```
+## Configuraciones Adicionales
+```
 git clone <kitty-config-repo> ~/.config/kitty
 git clone <starship-config-repo> ~/.config/starship
-
+```
 # Instalar starship si no está instalado
 sudo pacman -S starship
-📦 Paquetes a Instalar
-bash
+
 # Instalar paquetes esenciales
+```
 sudo pacman -S \
     tree \
     librewolf-bin \
     speedtest-cli \
     kitty \
-    btop
-
-# O instalar individualmente
-sudo pacman -S tree
-sudo pacman -S librewolf-bin
-sudo pacman -S speedtest-cli
-🛠️ Comandos Útiles
-Verificación de Configuración
-bash
-# Verificar que todos los componentes estén instalados
-which kitty
-which librewolf
-which starship
-tmux -V
-Recargar Configuraciones
-bash
-# Recargar Hyprland (desde terminal dentro de Hyprland)
-hyprctl reload
-
-# Recargar bashrc
-source ~/.bashrc
-🎯 Resumen de Atajos de Teclado
-Atajo	Función
-SUPER + Enter	Abrir terminal (Kitty)
-SUPER + F	Pantalla completa
-SUPER + B	Abrir navegador (LibreWolf)
-SUPER + T	Monitor del sistema (btop)
-❗ Notas Importantes
-Omarchy es principalmente una personalización mediante modificaciones de configuración
-
-Asegúrate de hacer backup de tus configuraciones originales
-
-Los paths pueden variar según tu instalación específica
-
-Reinicia Hyprland después de hacer cambios en los archivos de configuración
-
-🔧 Solución de Problemas
-Si encuentras problemas:
-
-Verifica las rutas de los archivos de configuración
-
-Confirma que todos los paquetes estén instalados
-
-Revisa los logs de Hyprland con hyprctl logs
-
+```
 ¡Listo! Tu configuración de Omarchy debería estar funcionando correctamente.
 
