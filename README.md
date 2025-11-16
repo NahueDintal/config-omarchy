@@ -1,17 +1,11 @@
 # Configuración de Omarchy
-##Una guía paso a paso para configurar Omarchy con las aplicaciones esenciales.
+## Una guía paso a paso para configurar Omarchy con las aplicaciones esenciales.
 
-📋 Prerrequisitos
-Sistema Arch Linux instalado
+## Configuración bash
 
-Entorno Hyprland configurado
-
-Permisos de administrador para instalar paquetes
-
-🚀 Configuración Paso a Paso
-1. Configuración del Shell (.bashrc)
-Ubicación: ~/.local/share/omarchy/default/bash/rc
-
+```
+~/.local/share/omarchy/default/bash/rc
+```
 Agrega tus alias y configuraciones personalizadas al archivo bashrc.
 
 2. Configuración de Tmux
