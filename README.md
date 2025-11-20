@@ -60,6 +60,7 @@ sudo pacman -S \
     librewolf-bin \
     speedtest-cli \
     kitty \
+    yazi \
 ```
 # Waybar
 ```
