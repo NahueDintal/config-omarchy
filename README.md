@@ -61,6 +61,8 @@ sudo pacman -S \
     speedtest-cli \
     kitty \
     yazi \
+    dotnet \
+    jdk-open \
 ```
 # Waybar
 ```
