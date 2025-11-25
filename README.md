@@ -18,14 +18,21 @@ No olvidar la cfg de ssh para poder descargar repositorios de github
 ```
 ssh-keygen -t ed25519 -C "tu_email@ejemplo.com"
 ```
+Dejar configurado el ufw siempre
+
+```
+sudo systemctl enable ufw
+```
 
 ## Configuración de Tmux
 
 Clonar y configurar tmux
+
 ```
 git@github.com:NahueDintal/tmux.git
 mv tmux .tmux
 ```
+
 Instalar tmux
 ```
 sudo pacman -S tmux
