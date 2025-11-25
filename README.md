@@ -6,9 +6,17 @@
 ```
 ~/.local/share/omarchy/default/bash/rc
 ```
+
 Y copiar el bash que está en estos archivos.
+
 ```
 source .bashrc
+
+```
+No olvidar la cfg de ssh para poder descargar repositorios de github
+
+```
+ssh-keygen -t ed25519 -C "tu_email@ejemplo.com"
 ```
 
 ## Configuración de Tmux
