@@ -12,3 +12,4 @@ bindd = SUPER, N, Editor, exec, omarchy-launch-or-focus "nvim-editor" "kitty --t
 bindd = SUPER, Y, YouTube, exec, omarchy-launch-or-focus-webapp YouTube "https://youtube.com/"
 bindd = SUPER, G, WhatsApp, exec, omarchy-launch-or-focus-webapp WhatsApp "https://web.whatsapp.com/"
 bindd = SUPER, T, Activity, exec, $terminal -e btop
+bindd = SUPER, I, DeepSeek, exec, omarchy-launch-or-focus-webapp DeepSeek "https://chat.deepseek.com"
