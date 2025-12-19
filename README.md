@@ -78,6 +78,8 @@ sudo pacman -S \
     yazi \
     dotnet \
     jdk-open \
+    lazy git
+    lazy docker
 ```
 # Waybar
 ```
