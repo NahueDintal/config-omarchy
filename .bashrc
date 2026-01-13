@@ -69,15 +69,18 @@ alias mv='mv -i'
 alias df='df -h'
 alias du='du -h'
 alias actualy='yes y | sudo pacman -Syu'
-alias v='nvim'
+alias v='vim'
+alias nv='nvim'
 alias pullall='/home/nahuedintal/.config/scriptpropios/pullAll.sh'
 alias wifi='nmtui'
 alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias sqlserver='docker exec -it sqlserver-dev /bin/bash'
 alias c='clear'
-alias ping1='ping 1.1.1.1'
-alias ping8='ping 8.8.8.8'
-alias tk='tasker'
+alias ping1='ping -c 4 1.1.1.1'
+alias ping8='ping -c 4 8.8.8.8'
+alias g='git'
 
 # ====================
 # FUNCIONES PERSONALES
@@ -97,7 +100,7 @@ up() {
 }
 
 # Auto-start ssh-agent
-eval "$(ssh-agent -s)" > /dev/null
+eval "$(ssh-agent -s)" >/dev/null
 ssh-add ~/.ssh/id_rsa 2>/dev/null
 
 # ====================
@@ -113,3 +116,5 @@ mkdir -p "$STARSHIP_CACHE"
 
 # Acelera la comprobación de git
 export STARSHIP_CONFIG_GIT_DISCOVERY_LIMIT=1
+export PATH_TO_FX="$HOME/javafx-sdk-25.0.1/lib"
+export PATH_TO_FX="/home/nahue/javafx-sdk-25.0.1/lib"
