@@ -43,6 +43,17 @@ sudo pacman -S tmux
 ```
 Configuración en los archivos con los script para buscar app's
 
+## Config de la terminal para tamaño, en la siguiente ruta
+
+
+/home/nahue/.local/share/omarchy/default/hypr/apps
+
+```
+windowrule = size 1200 600, match:class (kitty)
+
+```
+
+
 ## Configuración del Teclado
 
 ```
