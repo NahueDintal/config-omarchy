@@ -2,7 +2,7 @@
 ## Una guía paso a paso para configurar Omarchy con las aplicaciones esenciales.
 
 ## Configuración bash
-
+cambiar el bashrc en home/personal
 ```
 ~/.local/share/omarchy/default/bash/rc
 ```
