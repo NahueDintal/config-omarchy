@@ -40,7 +40,7 @@ bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
 bind "set bell-style none"
 
-# Set para tener comados vim para terminal bash
+# Set para tener comandos vim para la terminal bash
 set -o vi
 
 # Completado para comandos comunes
@@ -71,21 +71,24 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias df='df -h'
 alias du='du -h'
-alias actualy='yes y | sudo pacman -Syu'
+alias actualy='yes s | sudo pacman -Syu'
 alias v='nvim'
-alias pullall='/home/nahuedintal/.config/scriptpropios/pullAll.sh'
+alias pullall='cd ~/Estudio/scriptLinux/ && ./pullAll.sh'
+alias descanso='cd ~/Estudio/scriptLinux/ && ./temporizadorEjercicio.sh'
 alias wifi='nmtui'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias sqlserver='docker exec -it sqlserver-dev /bin/bash'
+alias ff='fastfetch'
 alias c='clear'
 alias ping1='ping -c 4 1.1.1.1'
 alias ping8='ping -c 4 8.8.8.8'
-alias tasker='tk'
 alias ipnow='echo "IP: $(curl -s ifconfig.me) - País: $(curl -s ifconfig.co/country)"'
-alias vpnup='sudo wg-quick up wg0'
-alias vpndown='sudo wg-quick down wg0'
+alias vpnup='sudo wg-quick up'
+alias vpndown='sudo wg-quick down'
+alias vpnshow='sudo wg show'
+alias sy='shelp'
+alias pomodoro='cd ~/Estudio/scriptLinux/ && ./pomodoro.sh'
 
 # ====================
 # FUNCIONES PERSONALES
@@ -105,7 +108,7 @@ up() {
 }
 
 # Auto-start ssh-agent
-eval "$(ssh-agent -s)" > /dev/null
+eval "$(ssh-agent -s)" >/dev/null
 ssh-add ~/.ssh/id_rsa 2>/dev/null
 
 # ====================
@@ -119,5 +122,19 @@ export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 export STARSHIP_CACHE="$HOME/.cache/starship"
 mkdir -p "$STARSHIP_CACHE"
 
+# Syntax help
+export PATH="$HOME/.syntaxHelp/bin:$PATH"
+
 # Acelera la comprobación de git
 export STARSHIP_CONFIG_GIT_DISCOVERY_LIMIT=1
+
+# FX de java
+export PATH_TO_FX="$HOME/javafx-sdk-25.0.1/lib"
+export PATH_TO_FX="/home/nahue/javafx-sdk-25.0.1/lib"
+
+# Manuales español
+export MANPATH=/usr/share/man/es:/usr/share/man
+
+# opencode
+export PATH=/home/nahue/.opencode/bin:$PATH
+export PATH="$HOME/.local/bin:$PATH"
