@@ -1,58 +1,9 @@
 # Configuración de Omarchy
 ## Una guía paso a paso para configurar Omarchy con las aplicaciones esenciales.
-
-## Configuración bash
-cambiar el bashrc en home/personal
-```
-~/.local/share/omarchy/default/bash/rc
-```
-
-Y copiar el bash que está en estos archivos.
-
-```
-source .bashrc
-
-```
-No olvidar la cfg de ssh para poder descargar repositorios de github
-
+1ro generar llave ssh para poder clonar repos...
 ```
 ssh-keygen -t ed25519 -C "tu_email@ejemplo.com"
 ```
-Dejar configurado el ufw siempre
-
-```
-sudo systemctl enable ufw
-```
-
-## Configuración de Tmux
-
-Clonar y configurar tmux
-
-```
-git@github.com:NahueDintal/tmux.git
-mv tmux .tmux
-```
-
-Instalar tmux
-```
-sudo pacman -S tmux
-```
-## Configuración de Hyprland (Bindings)
-```
-~/.config/hypr/bindings.conf
-```
-Configuración en los archivos con los script para buscar app's
-
-## Config de la terminal para tamaño, en la siguiente ruta
-
-
-/home/nahue/.local/share/omarchy/default/hypr/apps
-
-```
-windowrule = size 1200 600, match:class (kitty)
-
-```
-
 
 ## Configuración del Teclado
 
@@ -71,28 +22,9 @@ input {
     # kb_options = grp:alts_toggle
 }
 ```
-## Configuraciones Adicionales
-```
-git clone <kitty-config-repo> ~/.config/kitty
-git clone <starship-config-repo> ~/.config/starship
-```
-# Instalar starship si no está instalado
-sudo pacman -S starship
 
-# Instalar paquetes esenciales
-```
-sudo pacman -S \
-    tree \
-    librewolf-bin \
-    speedtest-cli \
-    kitty \
-    yazi \
-    dotnet \
-    jdk-open \
-    lazy git
-    lazy docker
-```
 # Waybar
+
 ```
   "clock": {
     "format": "{:L%d %A %H:%M}",
@@ -102,6 +34,7 @@ sudo pacman -S \
     "on-click-right": "omarchy-cmd-tzupdate"
   },
 ```
+
 # Vimium
 
 ```
