@@ -6,20 +6,13 @@ sudo ufw status | grep "Status"
 
 echo "Instalaciones"
 
-sudo pacman -S \
-  tree \
-  speedtest-cli \
-  kitty \
-  yazi \
-  dotnet \
-  jdk-open \
-  lazy git \
-  lazy docker \
-  starship
+sudo pacman -S tree speedtest-cli kitty yazi jdk-open lazygit lazydocker starship fastfetch
 
 echo -e "Comienzo de script de configuración para Omarchy"
 
 cp .bashrc /home/nahue/
+
+cd /home/nahue/
 
 source .bashrc
 
@@ -31,13 +24,19 @@ echo "Agregado de opciones de tamaño de ventana para terminales"
 
 echo "Copiado de starship a .config"
 
-cp starship.toml ~/.config/
+cd ~/config-omarchy/ && cp starship.toml ~/.config/
 
-cat bindings >>~/.config/hypr/bindings.conf
+echo "Bindings para hyprland copiadas"
+
+cat bindings > ~/.config/hypr/bindings.conf
+
+echo "Copiado de config de fastfetch"
+
+cd ~/config-omarchy/ && cat fastfetch > ~/.config/fastfetch/config.jsonc
 
 echo "Repo de tmux"
 
-git clone https://github.com/NahueDintal/tmux.git && mv tmux/ .tmux/
+cd /home/nahue && git clone https://github.com/NahueDintal/tmux.git && mv tmux/ .tmux/
 
 echo "Repo Syntax Helper"
 
@@ -53,12 +52,24 @@ git clone https://github.com/NahueDintal/.jc-cli.git
 
 echo "Repo de kitty"
 
-cd .config/kitty && git clone https://github.com/NahueDintal/kitty.git
+cd .config/ && git clone https://github.com/NahueDintal/kitty.git
 
 cd /home/nahue
 
 echo "Repo nvim"
 
-cd .config/ && git clone https://github.com/NahueDintal/nvim.git
+cd ~/.config/ && git clone https://github.com/NahueDintal/nvim.git
 
-cd /home/nahue/
+echo "Agreagado de script para sy, jc, tk"
+
+cd ~/.local/ && mkdir bin/ && cd bin/
+
+echo '#!/bin/bash\n~/.syntaxHelp/bin/shelp "$@"' > ~/.local/bin/sy
+chmod +x ~/.local/bin/sy
+
+echo '#!/bin/bash\n~/.jc-cli/jc.jar "$@"' > ~/.local/bin/jc
+chmod +x ~/.local/bin/jc
+
+echo '#!/bin/bash\n~/.tk/tk.jar "$@"' > ~/.local/bin/tk
+chmod +x ~/.local/bin/tk
+
