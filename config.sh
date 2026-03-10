@@ -4,6 +4,19 @@ echo -e "Verificación de UFW activo..."
 
 sudo ufw status | grep "Status"
 
+echo "Instalaciones"
+
+sudo pacman -S \
+  tree \
+  speedtest-cli \
+  kitty \
+  yazi \
+  dotnet \
+  jdk-open \
+  lazy git \
+  lazy docker \
+  starship
+
 echo -e "Comienzo de script de configuración para Omarchy"
 
 cp .bashrc /home/nahue/
@@ -15,6 +28,10 @@ echo -e "Bashrc instalado"
 echo "windowrule = size 1200 600, match:class (kitty)" >>/home/nahue/.local/share/omarchy/default/hypr/apps/terminals.conf
 
 echo "Agregado de opciones de tamaño de ventana para terminales"
+
+echo "Copiado de starship a .config"
+
+cp starship.toml ~/.config/
 
 cat bindings >>~/.config/hypr/bindings.conf
 
@@ -45,16 +62,3 @@ echo "Repo nvim"
 cd .config/ && git clone https://github.com/NahueDintal/nvim.git
 
 cd /home/nahue/
-
-echo "Instalaciones"
-
-sudo pacman -S \
-  tree \
-  speedtest-cli \
-  kitty \
-  yazi \
-  dotnet \
-  jdk-open \
-  lazy git \
-  lazy docker \
-  starship
