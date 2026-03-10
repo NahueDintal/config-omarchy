@@ -28,11 +28,11 @@ cd ~/config-omarchy/ && cp starship.toml ~/.config/
 
 echo "Bindings para hyprland copiadas"
 
-cat bindings > ~/.config/hypr/bindings.conf
+cat bindings >~/.config/hypr/bindings.conf
 
 echo "Copiado de config de fastfetch"
 
-cd ~/config-omarchy/ && cat fastfetch > ~/.config/fastfetch/config.jsonc
+cd ~/config-omarchy/ && cat fastfetch >~/.config/fastfetch/config.jsonc
 
 echo "Repo de tmux"
 
@@ -56,6 +56,10 @@ cd .config/ && git clone git@github.com:NahueDintal/kitty.git
 
 cd /home/nahue
 
+echo "Repo de Work"
+
+cd /home/nahue/ && git clone git@github.com:NahueDintal/Work.git
+
 echo "Repo nvim"
 
 cd ~/.config/ && git clone git@github.com:NahueDintal/nvim.git
@@ -64,11 +68,11 @@ echo "Agreagado de script para sy, jc, tk"
 
 cd ~/.local/ && mkdir bin/ && cd bin/
 
-echo '#!/bin/bash\n~/.syntaxHelp/bin/shelp "$@"' > ~/.local/bin/sy
+echo '#!/bin/bash\n~/.syntaxHelp/bin/shelp "$@"' >~/.local/bin/sy
 chmod +x ~/.local/bin/sy
 
-echo '#!/bin/bash\n~/.jc-cli/jc.jar "$@"' > ~/.local/bin/jc
+echo '#!/bin/bash\n~/.jc-cli/jc.jar "$@"' >~/.local/bin/jc
 chmod +x ~/.local/bin/jc
 
-echo '#!/bin/bash\n~/.tk/tk.jar "$@"' > ~/.local/bin/tk
+echo '#!/bin/bash\n~/.tk/tk.jar "$@"' >~/.local/bin/tk
 chmod +x ~/.local/bin/tk
