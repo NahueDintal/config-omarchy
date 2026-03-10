@@ -36,29 +36,29 @@ cd ~/config-omarchy/ && cat fastfetch > ~/.config/fastfetch/config.jsonc
 
 echo "Repo de tmux"
 
-cd /home/nahue && git clone https://github.com/NahueDintal/tmux.git && mv tmux/ .tmux/
+cd /home/nahue && git clone git@github.com:NahueDintal/tmux.git && mv tmux/ .tmux/
 
 echo "Repo Syntax Helper"
 
-git clone https://github.com/NahueDintal/.syntaxHelp.git
+git clone git@github.com:NahueDintal/.syntaxHelp.git
 
 echo "Repo de Tasker"
 
-git clone https://github.com/NahueDintal/.tk.git
+git clone git@github.com:NahueDintal/tasker.git
 
 echo "Repo Java commander"
 
-git clone https://github.com/NahueDintal/.jc-cli.git
+git clone git@github.com:NahueDintal/.jc-cli.git
 
 echo "Repo de kitty"
 
-cd .config/ && git clone https://github.com/NahueDintal/kitty.git
+cd .config/ && git clone git@github.com:NahueDintal/kitty.git
 
 cd /home/nahue
 
 echo "Repo nvim"
 
-cd ~/.config/ && git clone https://github.com/NahueDintal/nvim.git
+cd ~/.config/ && git clone git@github.com:NahueDintal/nvim.git
 
 echo "Agreagado de script para sy, jc, tk"
 
@@ -72,4 +72,3 @@ chmod +x ~/.local/bin/jc
 
 echo '#!/bin/bash\n~/.tk/tk.jar "$@"' > ~/.local/bin/tk
 chmod +x ~/.local/bin/tk
-
