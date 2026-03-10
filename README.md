@@ -102,3 +102,16 @@ sudo pacman -S \
     "on-click-right": "omarchy-cmd-tzupdate"
   },
 ```
+# Vimium
+
+```
+unmap f
+unmap t
+unmap J
+unmap K
+unmap >>
+unmap <<
+map i focusInput
+map L nextTab
+map H previousTab
+```
