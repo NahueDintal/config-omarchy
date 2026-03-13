@@ -1,14 +1,14 @@
 #!/bin/bash
 
-echo -e "Verificación de UFW activo..."
+echo -e ":: Verificación de UFW activo..."
 
 sudo ufw status | grep "Status"
 
-echo "Instalaciones"
+echo ":: Instalaciones"
 
-sudo pacman -S tree speedtest-cli kitty yazi jdk-open lazygit lazydocker starship fastfetch
+sudo pacman -S tree speedtest-cli kitty yazi jdk-openjdk lazygit lazydocker starship fastfetch
 
-echo -e "Comienzo de script de configuración para Omarchy"
+echo -e ":: Comienzo de script de configuración para Omarchy"
 
 cp .bashrc /home/nahue/
 
@@ -16,33 +16,33 @@ cd /home/nahue/
 
 source .bashrc
 
-echo -e "Bashrc instalado"
+echo -e ":: Bashrc instalado"
 
 echo "windowrule = size 1200 600, match:class (kitty)" >>/home/nahue/.local/share/omarchy/default/hypr/apps/terminals.conf
 
-echo "Agregado de opciones de tamaño de ventana para terminales"
+echo ":: Agregado de opciones de tamaño de ventana para terminales"
 
-echo "Copiado de starship a .config"
+echo ":: Copiado de starship a .config"
 
 cd ~/config-omarchy/ && cp starship.toml ~/.config/
 
-echo "Bindings para hyprland copiadas"
+echo ":: Bindings para hyprland copiadas"
 
 cat bindings >~/.config/hypr/bindings.conf
 
-echo "Copiado de config de fastfetch"
+echo ":: Copiado de config de fastfetch"
 
 cd ~/config-omarchy/ && cat fastfetch >~/.config/fastfetch/config.jsonc
 
-echo "Repo de tmux"
+echo ":: Repo de tmux"
 
 cd /home/nahue && git clone git@github.com:NahueDintal/tmux.git && mv tmux/ .tmux/
 
-echo "Repo Syntax Helper"
+echo ":: Repo Syntax Helper"
 
 git clone git@github.com:NahueDintal/.syntaxHelp.git
 
-echo "Repo de Tasker"
+echo ":: Repo de Tasker"
 
 git clone git@github.com:NahueDintal/tasker.git
 
@@ -52,19 +52,17 @@ git clone git@github.com:NahueDintal/.jc-cli.git
 
 echo "Repo de kitty"
 
-cd .config/ && git clone git@github.com:NahueDintal/kitty.git
-
-cd /home/nahue
+git clone git@github.com:NahueDintal/kitty.git
 
 echo "Repo de Work"
 
-cd /home/nahue/ && git clone git@github.com:NahueDintal/Work.git
+git clone git@github.com:NahueDintal/Work.git
 
-echo "Repo nvim"
+echo "::Repo nvim"
 
-cd ~/.config/ && git clone git@github.com:NahueDintal/nvim.git
+git clone git@github.com:NahueDintal/nvim.git
 
-echo "Agreagado de script para sy, jc, tk"
+echo ":: Agreagado de script para sy, jc, tk"
 
 cd ~/.local/ && mkdir bin/ && cd bin/
 
