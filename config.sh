@@ -1,12 +1,13 @@
 #!/bin/bash
 
-echo -e ":: Verificación de UFW activo..."
 
 sudo ufw status | grep "Status"
 
+echo -e ":: Verificación de UFW activo..."
+
 echo ":: Instalaciones"
 
-sudo pacman -S tree speedtest-cli kitty yazi jdk-openjdk lazygit lazydocker starship fastfetch
+yes s | sudo pacman -S tree speedtest-cli kitty yazi jdk-openjdk lazygit lazydocker starship fastfetch
 
 echo -e ":: Comienzo de script de configuración para Omarchy"
 
@@ -17,6 +18,10 @@ cd /home/nahue/
 source .bashrc
 
 echo -e ":: Bashrc instalado"
+
+echo -e "Agreagado de fuente cursiva"
+
+cp ~/config-omarchy/Hack iCursive S12 Italic.ttf ~/.local/share/fonts/
 
 echo "windowrule = size 1200 600, match:class (kitty)" >>/home/nahue/.local/share/omarchy/default/hypr/apps/terminals.conf
 
