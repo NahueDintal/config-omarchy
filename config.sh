@@ -74,8 +74,8 @@ cd ~/.local/ && mkdir bin/ && cd bin/
 echo '#!/bin/bash\n~/.syntaxHelp/bin/shelp "$@"' >~/.local/bin/sy
 chmod +x ~/.local/bin/sy
 
-echo '#!/bin/bash\n~/.jc-cli/jc.jar "$@"' >~/.local/bin/jc
+echo '#!/bin/bash\njava -jar ~/.jc-cli/jc.jar "$@"' >~/.local/bin/jc
 chmod +x ~/.local/bin/jc
 
-echo '#!/bin/bash\n~/.tk/tk.jar "$@"' >~/.local/bin/tk
+echo '#!/bin/bash\njava -jar ~/.tk/tk.jar "$@"' >~/.local/bin/tk
 chmod +x ~/.local/bin/tk
