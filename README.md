@@ -5,6 +5,11 @@
 ssh-keygen -t ed25519 -C "tu_email@ejemplo.com"
 ```
 
+# Config de Nvim 
+## Luego de descargar el repo, tenes que ingresar a las opciones de lazy y actualizar
+## Luego, :MasonInstall jdtls
+## para tener el LSP de java listo para usar!
+
 ## Configuración del Teclado
 
 ```
