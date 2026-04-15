@@ -83,12 +83,14 @@ alias ff='fastfetch'
 alias c='clear'
 alias ping1='ping -c 4 1.1.1.1'
 alias ping8='ping -c 4 8.8.8.8'
-alias ipnow='echo "IP: $(curl -s ifconfig.me) - País: $(curl -s ifconfig.co/country)"'
+alias ipnow='echo "País: $(curl -s ifconfig.co/country)"'
 alias vpnup='sudo wg-quick up'
 alias vpndown='sudo wg-quick down'
 alias vpnshow='sudo wg show'
 alias sy='shelp'
 alias pomodoro='cd ~/Estudio/scriptLinux/ && ./pomodoro.sh && cd /home/nahue/'
+alias mysqlup='cd /home/nahue/Estudio/podman/dbstack; podman pod rm dbstack; podman kube play --publish 3000:3000 dbstack.yml'
+alias mysqldown='podman pod stop dbstack'
 
 # ====================
 # FUNCIONES PERSONALES
