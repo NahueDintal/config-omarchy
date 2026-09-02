@@ -66,7 +66,7 @@ fi
 # ALIAS ÚTILES
 # ====================
 alias ls='ls --color=auto'
-alias ll='ls -lAh'
+alias ll='ls -lSh'
 alias cp='cp -i'
 alias mv='mv -i'
 alias df='df -h'
@@ -79,7 +79,7 @@ alias wifi='nmtui'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias ff='fastfetch'
+alias ff='cd ; clear ; fastfetch'
 alias c='clear'
 alias ping1='ping -c 4 1.1.1.1'
 alias ping8='ping -c 4 8.8.8.8'
@@ -88,9 +88,10 @@ alias vpnup='sudo wg-quick up'
 alias vpndown='sudo wg-quick down'
 alias vpnshow='sudo wg show'
 alias sy='shelp'
-alias pomodoro='cd ~/Estudio/scriptLinux/ && ./pomodoro.sh; cd /home/nahue/'
-alias mysqlup='podman pod rm dbstack; podman kube play --publish 3000:3000 dbstack.yml'
+alias pomodoro='cd ~/Estudio/scriptLinux/ && ./pomodoro.sh && cd /home/nahue/'
+alias mysqlup='cd /home/nahue/Estudio/podman/dbstack; podman pod rm dbstack; podman kube play --publish 3000:3000 dbstack.yml'
 alias mysqldown='podman pod stop dbstack'
+alias mvnrun='JAVA_TOOL_OPTIONS="-Dglass.gtk.uiScale=0.8" mvn javafx:run'
 
 # ====================
 # FUNCIONES PERSONALES
@@ -131,8 +132,10 @@ export PATH="$HOME/.syntaxHelp/bin:$PATH"
 export STARSHIP_CONFIG_GIT_DISCOVERY_LIMIT=1
 
 # FX de java
-export PATH_TO_FX="$HOME/javafx-sdk-25.0.1/lib"
-export PATH_TO_FX="/home/nahue/javafx-sdk-25.0.1/lib"
+# export PATH_TO_FX="$HOME/javafx-sdk-25.0.1/lib"
+# export PATH_TO_FX="/home/nahue/javafx-sdk-25.0.1/lib"
+# Reemplaza '17.0.X' con la versión exacta que descargaste
+export PATH_TO_FX="$HOME/javafx-sdk-17.0.X/lib"
 
 # Manuales español
 export MANPATH=/usr/share/man/es:/usr/share/man
@@ -140,3 +143,4 @@ export MANPATH=/usr/share/man/es:/usr/share/man
 # opencode
 export PATH=/home/nahue/.opencode/bin:$PATH
 export PATH="$HOME/.local/bin:$PATH"
+export PATH_TO_FX="$HOME/javafx-sdk-17.0.19/lib"
