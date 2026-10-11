@@ -47,11 +47,10 @@ Windows = ""
 
 # Carácter del prompt
 [character]
-success_symbol = '[➜](bold green)'
-error_symbol = '[➜](bold red)'
-vicmd_symbol = '[V](bold yellow)'
+success_symbol = '[➜](bold #5e8686)'
+error_symbol = '[➜](bold #da9797)'
+vicmd_symbol = '[V](bold #c0c0c0)'
 
-# Usuario (solo se muestra si no eres el usuario por defecto)
 [username]
 style_user = "bold dimmed blue"
 style_root = "bold red"
