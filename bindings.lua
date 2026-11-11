@@ -30,27 +30,36 @@
 
 -- ~/.config/hypr/bindings.lua
 -- Binds personales de Nahue
+-- ~/.config/hypr/bindings.lua
 
--- Terminal: lanza o enfoca kitty
+-- 1) Desvincular defaults de Omarchy que vamos a reemplazar
+hl.unbind("SUPER + RETURN") -- terminal default de Omarchy
+hl.unbind("SUPER + B")      -- browser default (si existe)
+hl.unbind("SUPER + T")      -- (si Omarchy lo usa)
+
+-- 2) Fullscreen (dispatcher nativo, sintaxis vieja .conf)
+--    En la nueva API, verificar si va con hl.bind
+-- hl.bind("SUPER + F", "fullscreenstate, 3")
+
+-- 3) Binds propios
 o.bind("SUPER + RETURN", "Terminal", "omarchy-launch-or-focus kitty")
 
--- Discord
-o.bind("SUPER + D", "Discord", "omarchy-launch-or-focus-webapp Discord 'https://discord.com/channels/@me'")
+o.bind("SUPER + D", "Discord",
+  "omarchy-launch-or-focus-webapp Discord 'https://discord.com/channels/@me'")
 
--- Navegador
 o.bind("SUPER + B", "Browser", "omarchy-launch-or-focus chromium")
 
--- Editor (kitty con título especial)
-o.bind("SUPER + N", "Editor", "omarchy-launch-or-focus nvim-editor 'kitty --title nvim-editor -e nvim'")
+o.bind("SUPER + N", "Editor",
+  "omarchy-launch-or-focus nvim-editor 'kitty --title nvim-editor -e nvim'")
 
--- YouTube
-o.bind("SUPER + Y", "YouTube", "omarchy-launch-or-focus-webapp YouTube 'https://youtube.com/'")
+o.bind("SUPER + Y", "YouTube",
+  "omarchy-launch-or-focus-webapp YouTube 'https://youtube.com/'")
 
--- WhatsApp
-o.bind("SUPER + G", "WhatsApp", "omarchy-launch-or-focus-webapp WhatsApp 'https://web.whatsapp.com/'")
+o.bind("SUPER + G", "WhatsApp",
+  "omarchy-launch-or-focus-webapp WhatsApp 'https://web.whatsapp.com/'")
 
--- btop
 o.bind("SUPER + T", "Activity", "kitty -e btop")
 
--- DeepSeek
-o.bind("SUPER + I", "DeepSeek", "omarchy-launch-or-focus-webapp DeepSeek 'https://chat.deepseek.com'")
+o.bind("SUPER + I", "DeepSeek",
+  "omarchy-launch-or-focus-webapp DeepSeek 'https://chat.deepseek.com'")
+
